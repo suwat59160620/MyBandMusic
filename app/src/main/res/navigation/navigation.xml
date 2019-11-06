@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/listFragment2">
+    <fragment
+        android:id="@+id/listFragment2"
+        android:name="buu.informatics.s59160620.mybandmusic.ListFragment"
+        android:label="MyBandMusic">
+        <action
+            android:id="@+id/action_listFragment2_to_myBand"
+            app:destination="@id/myBand" />
+    </fragment>
+    <fragment
+        android:id="@+id/myBand"
+        android:name="buu.informatics.s59160620.mybandmusic.MyBand"
+        android:label="MyBand" >
+        <action
+            android:id="@+id/action_myBand_to_recordFragment"
+            app:destination="@id/recordFragment" />
+        <action
+            android:id="@+id/action_myBand_to_musicFragment"
+            app:destination="@id/musicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordFragment"
+        android:name="buu.informatics.s59160620.mybandmusic.recordFragment"
+        android:label="recordFragment" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="buu.informatics.s59160620.mybandmusic.AboutFragment"
+        android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="buu.informatics.s59160620.mybandmusic.rules"
+        android:label="เพิ่มเพลงที่รักและที่ชอบ"
+        tools:layout="@layout/fragment_rules" >
+        <action
+            android:id="@+id/action_rulesFragment_to_listFragment2"
+            app:destination="@id/listFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/musicFragment"
+        android:name="buu.informatics.s59160620.mybandmusic.MusicFragment"
+        android:label="MusicFragment" />
+</navigation>
